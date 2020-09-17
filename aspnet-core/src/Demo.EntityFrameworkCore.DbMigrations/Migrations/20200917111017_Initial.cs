@@ -472,7 +472,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_AbpOrganizationUnitRoles", x => new { x.OrganizationUnitId, x.RoleId });
                     table.ForeignKey(
-                        name: "FK_AbpOrganizationUnitRoles_AbpOrganizationUnits_OrganizationUnitId",
+                        name: "FK_AbpOrganizationUnitRoles_AbpOrganizationUnits_OrganizationU~",
                         column: x => x.OrganizationUnitId,
                         principalTable: "AbpOrganizationUnits",
                         principalColumn: "Id",
@@ -581,7 +581,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_AbpUserOrganizationUnits", x => new { x.OrganizationUnitId, x.UserId });
                     table.ForeignKey(
-                        name: "FK_AbpUserOrganizationUnits_AbpOrganizationUnits_OrganizationUnitId",
+                        name: "FK_AbpUserOrganizationUnits_AbpOrganizationUnits_OrganizationU~",
                         column: x => x.OrganizationUnitId,
                         principalTable: "AbpOrganizationUnits",
                         principalColumn: "Id",
@@ -651,7 +651,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerApiClaims", x => new { x.ApiResourceId, x.Type });
                     table.ForeignKey(
-                        name: "FK_IdentityServerApiClaims_IdentityServerApiResources_ApiResourceId",
+                        name: "FK_IdentityServerApiClaims_IdentityServerApiResources_ApiResou~",
                         column: x => x.ApiResourceId,
                         principalTable: "IdentityServerApiResources",
                         principalColumn: "Id",
@@ -674,7 +674,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerApiScopes", x => new { x.ApiResourceId, x.Name });
                     table.ForeignKey(
-                        name: "FK_IdentityServerApiScopes_IdentityServerApiResources_ApiResourceId",
+                        name: "FK_IdentityServerApiScopes_IdentityServerApiResources_ApiResou~",
                         column: x => x.ApiResourceId,
                         principalTable: "IdentityServerApiResources",
                         principalColumn: "Id",
@@ -695,7 +695,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerApiSecrets", x => new { x.ApiResourceId, x.Type, x.Value });
                     table.ForeignKey(
-                        name: "FK_IdentityServerApiSecrets_IdentityServerApiResources_ApiResourceId",
+                        name: "FK_IdentityServerApiSecrets_IdentityServerApiResources_ApiReso~",
                         column: x => x.ApiResourceId,
                         principalTable: "IdentityServerApiResources",
                         principalColumn: "Id",
@@ -732,7 +732,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerClientCorsOrigins", x => new { x.ClientId, x.Origin });
                     table.ForeignKey(
-                        name: "FK_IdentityServerClientCorsOrigins_IdentityServerClients_ClientId",
+                        name: "FK_IdentityServerClientCorsOrigins_IdentityServerClients_Clien~",
                         column: x => x.ClientId,
                         principalTable: "IdentityServerClients",
                         principalColumn: "Id",
@@ -750,7 +750,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerClientGrantTypes", x => new { x.ClientId, x.GrantType });
                     table.ForeignKey(
-                        name: "FK_IdentityServerClientGrantTypes_IdentityServerClients_ClientId",
+                        name: "FK_IdentityServerClientGrantTypes_IdentityServerClients_Client~",
                         column: x => x.ClientId,
                         principalTable: "IdentityServerClients",
                         principalColumn: "Id",
@@ -768,7 +768,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerClientIdPRestrictions", x => new { x.ClientId, x.Provider });
                     table.ForeignKey(
-                        name: "FK_IdentityServerClientIdPRestrictions_IdentityServerClients_ClientId",
+                        name: "FK_IdentityServerClientIdPRestrictions_IdentityServerClients_C~",
                         column: x => x.ClientId,
                         principalTable: "IdentityServerClients",
                         principalColumn: "Id",
@@ -786,7 +786,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerClientPostLogoutRedirectUris", x => new { x.ClientId, x.PostLogoutRedirectUri });
                     table.ForeignKey(
-                        name: "FK_IdentityServerClientPostLogoutRedirectUris_IdentityServerClients_ClientId",
+                        name: "FK_IdentityServerClientPostLogoutRedirectUris_IdentityServerCl~",
                         column: x => x.ClientId,
                         principalTable: "IdentityServerClients",
                         principalColumn: "Id",
@@ -805,7 +805,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerClientProperties", x => new { x.ClientId, x.Key });
                     table.ForeignKey(
-                        name: "FK_IdentityServerClientProperties_IdentityServerClients_ClientId",
+                        name: "FK_IdentityServerClientProperties_IdentityServerClients_Client~",
                         column: x => x.ClientId,
                         principalTable: "IdentityServerClients",
                         principalColumn: "Id",
@@ -823,7 +823,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerClientRedirectUris", x => new { x.ClientId, x.RedirectUri });
                     table.ForeignKey(
-                        name: "FK_IdentityServerClientRedirectUris_IdentityServerClients_ClientId",
+                        name: "FK_IdentityServerClientRedirectUris_IdentityServerClients_Clie~",
                         column: x => x.ClientId,
                         principalTable: "IdentityServerClients",
                         principalColumn: "Id",
@@ -880,7 +880,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerIdentityClaims", x => new { x.IdentityResourceId, x.Type });
                     table.ForeignKey(
-                        name: "FK_IdentityServerIdentityClaims_IdentityServerIdentityResources_IdentityResourceId",
+                        name: "FK_IdentityServerIdentityClaims_IdentityServerIdentityResource~",
                         column: x => x.IdentityResourceId,
                         principalTable: "IdentityServerIdentityResources",
                         principalColumn: "Id",
@@ -922,7 +922,7 @@ namespace Demo.Migrations
                 {
                     table.PrimaryKey("PK_IdentityServerApiScopeClaims", x => new { x.ApiResourceId, x.Name, x.Type });
                     table.ForeignKey(
-                        name: "FK_IdentityServerApiScopeClaims_IdentityServerApiScopes_ApiResourceId_Name",
+                        name: "FK_IdentityServerApiScopeClaims_IdentityServerApiScopes_ApiRes~",
                         columns: x => new { x.ApiResourceId, x.Name },
                         principalTable: "IdentityServerApiScopes",
                         principalColumns: new[] { "ApiResourceId", "Name" },
@@ -935,7 +935,7 @@ namespace Demo.Migrations
                 column: "AuditLogId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AbpAuditLogActions_TenantId_ServiceName_MethodName_ExecutionTime",
+                name: "IX_AbpAuditLogActions_TenantId_ServiceName_MethodName_Executio~",
                 table: "AbpAuditLogActions",
                 columns: new[] { "TenantId", "ServiceName", "MethodName", "ExecutionTime" });
 

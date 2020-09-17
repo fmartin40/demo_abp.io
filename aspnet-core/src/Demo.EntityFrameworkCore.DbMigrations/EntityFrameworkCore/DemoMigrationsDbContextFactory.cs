@@ -16,7 +16,7 @@ namespace Demo.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<DemoMigrationsDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseNpgsql(configuration.GetConnectionString("Default"));
 
             return new DemoMigrationsDbContext(builder.Options);
         }
